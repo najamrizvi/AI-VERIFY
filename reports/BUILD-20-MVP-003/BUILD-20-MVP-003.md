@@ -1,0 +1,402 @@
+# AI-VERIFY Verification Report
+
+## Verification Result
+
+- **Status:** PARTIALLY VERIFIED
+- **Decision Rule:** INSUFFICIENT_OR_INCONCLUSIVE_EVIDENCE
+- **Rationale:** No contradiction was found, but the available supporting evidence is insufficient for verification.
+
+## Run
+
+- **Run ID:** BUILD-20-MVP-003
+
+## Requirement
+
+The verification command must complete successfully.
+
+## Invariant
+
+verification command exits with code 0
+
+## Verification Scope
+
+```json
+{
+  "files": [
+    {
+      "relative_path": "cases/case_002_missing_authorization/invoice_service.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_002_missing_authorization/test_case.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_003_partial_authorization/invoice_service.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_003_partial_authorization/test_case.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_004_edge_case_bypass/invoice_service.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_004_edge_case_bypass/test_case.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_005_correct_with_irrelevant_changes/invoice_service.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_005_correct_with_irrelevant_changes/test_case.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_006_correct_validation/invoice_service.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_006_correct_validation/test_case.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_007_missing_validation/invoice_service.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_007_missing_validation/test_case.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_008_partial_validation/invoice_service.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_008_partial_validation/test_case.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_009_edge_case_bypass/invoice_service.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_009_edge_case_bypass/test_case.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_010_correct_with_irrelevant_changes/invoice_service.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "cases/case_010_correct_with_irrelevant_changes/test_case.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "g02_repository/api/order_api.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "g02_repository/domain/models.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "g02_repository/domain/repository.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "g02_repository/services/order_service.good.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "g02_repository/services/order_service.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "g02_repository/services/payment_service.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "g02_repository/tests/test_api.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "g02_repository/tests/test_failure_probe.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "g02_repository/tests/test_orders.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "g02_repository/tests/test_payments.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/__init__.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/cli/__init__.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/cli/main.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/core/__init__.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/core/decision.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/core/execution.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/core/integrity.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/core/models.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/core/run_package.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/reporting/__init__.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/reporting/report.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/reporting/serialization.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/reporting/writer.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/repository/__init__.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/repository/analyzer.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/requirements/__init__.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/verification/__init__.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/verification/activity_runner.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/verification/evidence.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/verification/evidence_adapter.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/verification/evidence_pipeline.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/verification/executor.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/verification/orchestrator.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/verification/planner.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/verification/run.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/verification/scope.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/ai_verify/verification/service.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "src/invoice_service.py",
+      "role": "source"
+    },
+    {
+      "relative_path": "tests/integration/test_end_to_end.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/test_invoice_service.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_activity_runner.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_cli.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_decision.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_evidence.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_evidence_adapter.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_evidence_pipeline.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_executor.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_orchestrator.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_planner.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_report.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_repository_analyzer.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_run_package.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_scope.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_serialization.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_verification_run.py",
+      "role": "test"
+    },
+    {
+      "relative_path": "tests/unit/test_writer.py",
+      "role": "test"
+    }
+  ]
+}
+```
+
+## Verification Plan
+
+```json
+{
+  "activities": [
+    {
+      "activity_id": "positive-path",
+      "category": "positive",
+      "objective": "Verify that the implementation satisfies the requirement under the expected valid behavior.",
+      "required": true
+    },
+    {
+      "activity_id": "negative-path",
+      "category": "negative",
+      "objective": "Verify that invalid or prohibited behavior is rejected or prevented.",
+      "required": true
+    },
+    {
+      "activity_id": "edge-case",
+      "category": "edge",
+      "objective": "Verify boundary or unusual conditions that could invalidate the requirement.",
+      "required": true
+    }
+  ],
+  "required_evidence_count": 3
+}
+```
+
+## Evidence
+
+### cli-evidence
+
+- **Status:** SUPPORTS
+- **Type:** RUNTIME
+- **Description:** Evidence collected from the explicitly supplied CLI command.
+- **Source:** C:/Users/Administrator/Documents/AI-VERIFY-Experiment
+- **Observation:** Execution status: COMPLETED. Exit code: 0. stdout: ============================= test session starts =============================
+platform win32 -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\Administrator\Documents\AI-VERIFY-Experiment
+configfile: pyproject.toml
+testpaths: tests
+collected 122 items
+
+tests\integration\test_end_to_end.py ...                                 [  2%]
+tests\test_invoice_service.py .....                                      [  6%]
+tests\unit\test_activity_runner.py .....                                 [ 10%]
+tests\unit\test_cli.py ..............                                    [ 22%]
+tests\unit\test_decision.py ......                                       [ 27%]
+tests\unit\test_evidence.py .......                                      [ 32%]
+tests\unit\test_evidence_adapter.py .........                            [ 40%]
+tests\unit\test_evidence_pipeline.py ......                              [ 45%]
+tests\unit\test_executor.py ..........                                   [ 53%]
+tests\unit\test_orchestrator.py .....                                    [ 57%]
+tests\unit\test_planner.py ......                                        [ 62%]
+tests\unit\test_report.py .....                                          [ 66%]
+tests\unit\test_repository_analyzer.py .......                           [ 72%]
+tests\unit\test_run_package.py ......                                    [ 77%]
+tests\unit\test_scope.py .......                                         [ 82%]
+tests\unit\test_serialization.py .....                                   [ 86%]
+tests\unit\test_verification_run.py ........                             [ 93%]
+tests\unit\test_writer.py ........                                       [100%]
+
+============================= 122 passed in 3.13s =============================
+- **Execution ID:** None
+
+## Provenance
+
+```json
+{
+  "command": [
+    "C:\\Users\\Administrator\\Documents\\AI-VERIFY-Experiment\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest"
+  ],
+  "interface": "cli"
+}
+```
